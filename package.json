@@ -1,0 +1,15 @@
+{
+  "name": "ReactTodo",
+  "version": "0.0.0",
+  "description": "simple todo app",
+  "main": "app.js",
+  "dependencies": {
+    "connect": "*",
+    "serve-static": "*"
+  },
+  "author": "Lokesh Ranganathan (lranganathan@sapient.com)",
+  "license": "ISC",
+  "scripts": {    
+        "postinstall": "node app"
+    }
+}

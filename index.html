@@ -1,10 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
+    <title>ReactJS todo</title>
     <meta charset="UTF-8">
-    <title></title>
+    <title>react todo</title>
+    <link href="styles/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+    <script type="text/javascript" src="js/react.min.js"></script>
+    <script type="text/javascript" src="js/JSXTransformer.js"></script>
+    <script type="text/jsx" src="js/app.js"></script>
+    <style type="text/css">
+        h1.container{
+            text-align: center;
+        }
+        .container{
+            max-width: 500px;
+        }
+        .list-unstyled li{
+            height: 35px;
+            padding: 15px 5px 5px 5px;
+        }
+        .list-unstyled input[type='checkbox']{
+            margin: 0 5px 0 0;
+        }
+    </style>
 </head>
 <body>
-    react todo
+    <h1 class="container">ReactJS todo</h1>
+    <div id="master" class="container"></div>
 </body>
 </html>
