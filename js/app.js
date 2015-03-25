@@ -11,7 +11,7 @@
                     </div>
                     <ItemList data={this.state.listOfItems} dataStateUpdate={this.updateState} scope={this}/>
                 </form>
-                )
+            )
         },
         formHandler: function () {
             if (this.state.fieldValue) {
@@ -40,12 +40,12 @@
                     return <RouteFilter index={index} onDoubleClick={self.editItemValue} scope={self} item={item} removeItemFromList={self.removeItemFromList} itemCompleted={self.itemCompleted} />
                 }
             });
-            return(
+            return (
                 <div className='todo-wrapper container'>
                     <ul className='list-unstyled table table-condensed'>{reactEl}</ul>
                     {self.props.data.length ? <StatusBar data={self.props.data} count={self.getOpenItems} dataFilter={this.filterItems} clearCompleted={self.clearCompletedItem} /> : null}
                 </div>
-                )
+            )
         },
         routeFiltering: function (route, state) {
             if (route === 'all') {
@@ -98,11 +98,11 @@
 
     var RouteFilter = React.createClass({
         render: function () {
-            return(
+            return (
                 <li onDoubleClick={this.props.onDoubleClick} id={this.props.index}>
                 {this.props.item.editMode ? <EditItemTemplate scope={this.props.scope} item={this.props.item} /> : <ItemTemplate removeItemFromList={this.props.removeItemFromList} itemCompleted={this.props.itemCompleted}  item={this.props.item} />}
                 </li>
-                )
+            )
         }
     });
 
@@ -116,7 +116,7 @@
                         <span aria-hidden='true'>&times;</span>
                     </button>
                 </span>
-                )
+            )
         }
     });
 
@@ -126,7 +126,7 @@
                 <span>
                     <input type='text' className='form-control' value={this.props.item.todoName} onChange={this.updatedItemValue} onBlur={this.listenToUpdate} autoFocus='autofocus' onFocus={this.handleMouseDown} />
                 </span>
-                )
+            )
         },
         updatedItemValue: function (e) {
             this.props.item.todoName = e.target.value;
@@ -163,7 +163,7 @@
                     </ul>
                     {this.getCount() ? <a href='javascript:void(0)' className='col-xs-4' onClick={this.props.clearCompleted}> clear completed</a> : null}
                 </div>
-                )
+            )
         },
         getCount: function (state) {
             return state ? this.props.count().count : this.props.count().completedCount;
